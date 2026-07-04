@@ -1,0 +1,57 @@
+#pragma once
+
+const int CARD_NUMBER_LENGTH = 19;
+const int CARD_NUMBER_SIZE = 20;
+const int ID_NUMBER_LENGTH = 18;
+const int ID_NUMBER_SIZE = 19;
+const int OWNER_NAME_SIZE = 32;
+const int PAGE_SIZE = 10;
+
+enum AccountType {
+    ACCOUNT_DEMAND = 1,
+    ACCOUNT_FIXED = 2,
+    ACCOUNT_CREDIT = 3
+};
+
+enum AccountStatus {
+    STATUS_NORMAL = 1,
+    STATUS_LOST = 2,
+    STATUS_FROZEN = 3,
+    STATUS_CLOSED = 4
+};
+
+enum TransactionType {
+    TRANSACTION_DEPOSIT = 1,
+    TRANSACTION_WITHDRAW = 2,
+    TRANSACTION_TRANSFER_OUT = 3,
+    TRANSACTION_TRANSFER_IN = 4,
+    TRANSACTION_AUTO_TRANSFER = 5
+};
+
+enum ResultCode {
+    RESULT_SUCCESS = 0,
+    RESULT_ACCOUNT_NOT_FOUND,
+    RESULT_ACCOUNT_ALREADY_EXISTS,
+    RESULT_INVALID_CARD_NUMBER,
+    RESULT_INVALID_OWNER_NAME,
+    RESULT_INVALID_ID_NUMBER,
+    RESULT_INVALID_AMOUNT,
+    RESULT_INVALID_TERM,
+    RESULT_INVALID_STATUS,
+    RESULT_INSUFFICIENT_BALANCE,
+    RESULT_PASSWORD_ERROR,
+    RESULT_ID_MISMATCH,
+    RESULT_BALANCE_NOT_ZERO,
+    RESULT_SAME_ACCOUNT,
+    RESULT_MEMORY_ERROR,
+    RESULT_FILE_ERROR
+};
+
+struct DateTime {
+    int year;
+    int month;
+    int day;
+    int hour;
+    int minute;
+    int second;
+};
